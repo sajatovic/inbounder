@@ -492,4 +492,419 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10"/>
                         <line x1="2" y1="12" x2="22" y2="12"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 1
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                    www.intellirush.com
+                </a>
+                <a href="mailto:support@intellirush.com" class="contact-action">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2"/>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                    Contact Support (support@intellirush.com)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Interactive Search -->
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.3-4.3"/>
+                </svg>
+                <input type="text" id="faqSearch" class="search-input" placeholder="Search questions, features, settings, or troubleshooting..." onkeyup="filterFaqs()">
+            </div>
+        </div>
+
+        <!-- Quick Jump Navigation -->
+        <div class="nav-chips">
+            <a href="#overview" class="nav-chip">🛫 Overview & Backend</a>
+            <a href="#radar" class="nav-chip">🎯 Radar & Horizon Gauge</a>
+            <a href="#notifications" class="nav-chip">🔔 Geofencing & Push Alerts</a>
+            <a href="#filters" class="nav-chip">🔍 Airspace Filters</a>
+            <a href="#settings" class="nav-chip">⚙️ Preferences & Display</a>
+            <a href="#pro" class="nav-chip">💎 Inbounder Pro</a>
+            <a href="#troubleshooting" class="nav-chip">🛠️ Troubleshooting</a>
+        </div>
+
+        <!-- SECTION 1: General Overview & Backend -->
+        <section id="overview">
+            <div class="section-header">
+                <div class="section-icon">🛫</div>
+                <h2>General Overview & Architecture</h2>
+            </div>
+
+            <details class="faq-item" open>
+                <summary>What is Intellirush Inbounder?</summary>
+                <div class="answer">
+                    <p><strong>Intellirush Inbounder</strong> is a native iOS, iPadOS, and macOS real-time overhead flight tracking and spatial radar application. It monitors the airspace directly above you or any designated map center, alerting you the moment an aircraft enters your proximity radius or passes directly overhead.</p>
+                    <p>Featuring live vector radar, airline operator identification, aircraft model telemetry, and an intuitive <strong>Horizon Look-Up Perspective Gauge</strong>, Inbounder lets aviation enthusiasts and spotters identify flights overhead in seconds.</p>
+                    <p>For more details, product updates, and platform documentation, visit <a href="https://www.intellirush.com" target="_blank" rel="noopener"><strong>www.intellirush.com</strong></a>.</p>
+                </div>
+            </details>
+
+            <details class="faq-item" open>
+                <summary>How does the tracking engine work? (Intellirush Backend)</summary>
+                <div class="answer">
+                    <p>Inbounder connects directly to the high-performance <strong>Intellirush Cloud Backend</strong>. Built and operated by Intellirush, our cloud engine continuously ingests and aggregates high-throughput live ADS-B, transponder, and radar telemetry streams in real time.</p>
+                    <ul>
+                        <li><strong>Zero Configuration Required:</strong> No API keys, credentials, or third-party accounts needed. Tracking is immediate upon opening the app.</li>
+                        <li><strong>Sub-Second Precision:</strong> High-frequency telemetry updates with minimal latency.</li>
+                        <li><strong>Server-Side Spatial Indexing:</strong> Aircraft bounding boxes and proximity thresholds are computed server-side, preserving your device's battery life and cellular data.</li>
+                        <li><strong>24/7 Cloud Geofence Monitoring:</strong> The Intellirush cloud backend continuously tracks your geofence and dispatches background Apple Push Notifications (APNs) even when Inbounder is closed.</li>
+                    </ul>
+                    <div class="callout tip">
+                        <span class="callout-icon">💡</span>
+                        <div><strong>High-Availability Infrastructure:</strong> The dedicated Intellirush Cloud Backend provides reliable, continuous flight tracking with zero rate limiting and no user credentials required. Learn more at <a href="https://www.intellirush.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; font-weight: 600;">www.intellirush.com</a>.</div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>What types of aircraft can I track?</summary>
+                <div class="answer">
+                    <p>Intellirush Inbounder tracks all transponder-equipped aircraft in active airspace, including:</p>
+                    <ul>
+                        <li><strong>Commercial Airliners:</strong> Major passenger carriers worldwide with airline logos and origin/destination city pairs.</li>
+                        <li><strong>Cargo & Logistics:</strong> Dedicated airfreight carriers (FedEx, UPS, DHL, Atlas Air, etc.).</li>
+                        <li><strong>Regional & Commuter:</strong> Embraer E-Jets, Bombardier CRJ, and ATR turboprops.</li>
+                        <li><strong>General Aviation:</strong> Private jets, business aircraft, and single/twin-engine propeller planes.</li>
+                        <li><strong>Helicopters & Specialized Aircraft:</strong> Civil rotorcraft and law enforcement/emergency air medical flights.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION 2: Radar & Horizon Gauge -->
+        <section id="radar">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2>Radar, Telemetry & Horizon Gauge</h2>
+            </div>
+
+            <details class="faq-item">
+                <summary>What is the Horizon Look-Up Perspective Gauge?</summary>
+                <div class="answer">
+                    <p>The <strong>Horizon Look-Up Perspective Gauge</strong> solves the age-old question: <em>"Where exactly do I look in the sky?"</em></p>
+                    <p>By calculating the aircraft's altitude, your elevation, and the exact slant range distance between you and the aircraft, Inbounder plots an elevation arc from <strong>0° (Horizon)</strong> to <strong>90° (Directly Overhead / Zenith)</strong> with practical, plain-English observation guidance:</p>
+                    <ul>
+                        <li><strong>0° – 15°:</strong> <em>"Look straight towards the horizon"</em></li>
+                        <li><strong>15° – 45°:</strong> <em>"Look slightly above treeline / rooftops"</em></li>
+                        <li><strong>45° – 75°:</strong> <em>"Look high into the sky"</em></li>
+                        <li><strong>75° – 90°:</strong> <em>"Directly Overhead — look straight up!"</em></li>
+                    </ul>
+                    <p>The gauge also displays real-time compass heading, slant range distance, and approach angle indicators so you can spot aircraft effortlessly.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>What data is shown on the Aircraft Telemetry Card?</summary>
+                <div class="answer">
+                    <p>Selecting any flight in the airspace opens a comprehensive telemetry card containing:</p>
+                    <ul>
+                        <li><strong>Flight Identification:</strong> Operating carrier logo, flight callsign (e.g. DL142, UA882), and registered aircraft model (e.g. Airbus A350-900, Boeing 787-9 Dreamliner).</li>
+                        <li><strong>Route & Progress:</strong> Origin airport code (IATA/ICAO), destination airport code, distance remaining, and visual route progress bar.</li>
+                        <li><strong>Live Flight Dynamics:</strong> Real-time altitude (feet or meters), ground speed (knots or km/h), vertical ascent/descent rate, and true magnetic heading.</li>
+                        <li><strong>Spatial Proximity:</strong> Ground distance to your location, 3D slant range, and horizon elevation angle.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION 3: Geofencing & Push Alerts -->
+        <section id="notifications">
+            <div class="section-header">
+                <div class="section-icon">🔔</div>
+                <h2>Geofencing & Smart Alerts</h2>
+            </div>
+
+            <details class="faq-item">
+                <summary>How does the Alert Radius (Geofence) work?</summary>
+                <div class="answer">
+                    <p>You can define an alert radius around your location (from 1 km / 1 mile up to 100+ km / 60+ miles). The app renders an interactive geofence boundary ring on the radar map.</p>
+                    <p>You can configure whether this radius centers on:</p>
+                    <ul>
+                        <li><strong>Physical Device Location:</strong> Continuously follows your GPS coordinates as you move.</li>
+                        <li><strong>Pinned Map Center:</strong> Locks the radar and alert zone to any fixed coordinate (such as your home, office, an airport observation deck, or a vacation spot).</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>How do 24/7 Cloud Background Push Notifications work?</summary>
+                <div class="answer">
+                    <p>Unlike standard apps that stop updating when sent to the background or locked, Inbounder features <strong>server-backed Apple Push Notification (APNs) dispatch</strong> powered by the Intellirush Cloud Backend:</p>
+                    <ol>
+                        <li>When you enable background alerts, Inbounder securely syncs your active geofence center and radius to the Intellirush backend.</li>
+                        <li>The Intellirush backend monitors live airspace around your coordinates 24/7.</li>
+                        <li>When an inbound aircraft breaches your radius or meets your notification criteria, our cloud server instantly dispatches an APNs push notification directly to your iPhone, iPad, or Mac.</li>
+                        <li>You receive an alert with the airline, flight number, and altitude without keeping the app open or draining your battery.</li>
+                    </ol>
+                    <div class="callout tip">
+                        <span class="callout-icon">⚡</span>
+                        <div>Background push notifications require Inbounder Pro and Notification permissions enabled in iOS/macOS Settings.</div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>What are the Notification Filter options?</summary>
+                <div class="answer">
+                    <p>To ensure you only receive the alerts you care about, Inbounder offers granular notification filters:</p>
+                    <ul>
+                        <li><strong>Radius Breach (Standard):</strong> Triggers an alert whenever any aircraft crosses inside your configured proximity circle.</li>
+                        <li><strong>Directly Overhead Only:</strong> Intelligently suppresses distant horizon traffic and alerts you <em>only</em> when an aircraft passes directly above you (steep elevation look-up angle &gt; 65°).</li>
+                        <li><strong>Quiet Hours:</strong> Silence notifications during designated overnight periods.</li>
+                        <li><strong>Filter Suppression:</strong> If you have active aircraft filters (e.g. only widebody jets or cargo), notifications will automatically suppress any flights not matching your criteria.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION 4: Airspace Filters & Spotter Tools -->
+        <section id="filters">
+            <div class="section-header">
+                <div class="section-icon">🔍</div>
+                <h2>Airspace Filters & Spotter Tools</h2>
+            </div>
+
+            <details class="faq-item">
+                <summary>How do Aircraft & Airspace Filters work?</summary>
+                <div class="answer">
+                    <p>Tap the <strong>Filter</strong> icon in the radar HUD to open multi-parameter filtering:</p>
+                    <ul>
+                        <li><strong>Aircraft Model:</strong> Filter by specific ICAO type codes (e.g. <code>A388</code> for Airbus A380, <code>B77W</code> for Boeing 777-300ER, <code>B738</code> for 737-800).</li>
+                        <li><strong>Carrier / Airline:</strong> Show only specific operators (e.g. FedEx, United, Delta, British Airways).</li>
+                        <li><strong>Airports (Origin / Destination):</strong> Filter flights departing from or arriving at specific airports by 3-letter IATA code (e.g. <code>JFK</code>, <code>LHR</code>, <code>LAX</code>).</li>
+                        <li><strong>Altitude Range:</strong> Filter by minimum and maximum cruising altitude (e.g., isolate low-altitude approaches below 5,000 ft or high-altitude overflights above 30,000 ft).</li>
+                        <li><strong>Special Squawk Codes:</strong> Highlight emergency transponder codes (7700 General Emergency, 7600 Radio Loss, 7500 Unlawful Interference).</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I export spotter flight logs?</summary>
+                <div class="answer">
+                    <p>Yes! Aviation spotters can export aircraft observation logs directly from the app. You can export complete flight telemetry and observation histories in structured <strong>JSON</strong> or <strong>CSV</strong> formats to iCloud Drive, Files, or share via AirDrop.</p>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION 5: Preferences & Display -->
+        <section id="settings">
+            <div class="section-header">
+                <div class="section-icon">⚙️</div>
+                <h2>Settings, macOS Features & Preferences</h2>
+            </div>
+
+            <details class="faq-item">
+                <summary>Can Inbounder run in the macOS Menu Bar and launch at startup?</summary>
+                <div class="answer">
+                    <p>Yes. On macOS, Inbounder can operate as a full desktop app or run discreetly in your <strong>Menu Bar</strong>:</p>
+                    <ul>
+                        <li><strong>Menu Bar Popover:</strong> Click the airplane icon in the menu bar to view active inbound flights, live distance readouts, and quick settings without occupying your Dock or main desktop.</li>
+                        <li><strong>Launch at Startup:</strong> Enable <em>"Launch at Startup"</em> in Settings so Inbounder automatically begins monitoring airspace whenever you boot your Mac.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>What is the "Keep Screen On" (Screen Awake) feature?</summary>
+                <div class="answer">
+                    <p>The <strong>Keep Screen On</strong> setting overrides system display sleep timeouts. This prevents your iPhone, iPad, or Mac screen from dimming or sleeping while Inbounder is open — ideal when using your device as a dedicated tabletop radar display or cockpit side-monitor.</p>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>How does the Dynamic App Icon & Badge work?</summary>
+                <div class="answer">
+                    <p>On macOS and iOS, Inbounder dynamically adjusts its appearance:</p>
+                    <ul>
+                        <li><strong>Light & Dark Mode Adaptation:</strong> The icon automatically aligns with your system theme or selected preference (Light, Dark, or Accent).</li>
+                        <li><strong>Active Inbound Badge:</strong> Displays an active numerical badge or notification dot indicating the exact number of aircraft currently inside your alert zone.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I switch between Imperial and Metric units?</summary>
+                <div class="answer">
+                    <p>Yes. In the Settings sheet, toggle the <strong>Unit System</strong> between:</p>
+                    <ul>
+                        <li><strong>Imperial:</strong> Distances in Miles (mi), Altitudes in Feet (ft), and Speeds in Knots (kts) or MPH.</li>
+                        <li><strong>Metric:</strong> Distances in Kilometers (km), Altitudes in Meters (m), and Speeds in Kilometers per hour (km/h).</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION 6: Inbounder Pro -->
+        <section id="pro">
+            <div class="section-header">
+                <div class="section-icon">💎</div>
+                <h2>Inbounder Pro Subscriptions</h2>
+            </div>
+
+            <details class="faq-item">
+                <summary>What is included in Inbounder Pro?</summary>
+                <div class="answer">
+                    <p>Inbounder Pro unlocks the complete power of the Intellirush Cloud ecosystem:</p>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>Standard (Free)</th>
+                                    <th>Inbounder Pro <span class="pill-tag pro">PRO</span></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Live Vector Radar</strong></td>
+                                    <td>Included</td>
+                                    <td>Included (Priority Low-Latency)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Intellirush Cloud ADS-B Feed</strong></td>
+                                    <td>Included (No API key needed)</td>
+                                    <td>Included (Priority cluster)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Horizon Look-Up Perspective</strong></td>
+                                    <td>Included</td>
+                                    <td>Included</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>24/7 Cloud Background Push Alerts</strong></td>
+                                    <td>Foreground only</td>
+                                    <td><strong>Full Background APNs Alerts</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Directly Overhead Elevation Filter</strong></td>
+                                    <td>Radius only</td>
+                                    <td><strong>Zenith / Overhead Look-up</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Advanced Aircraft Model & Route Filters</strong></td>
+                                    <td>Basic</td>
+                                    <td><strong>Unlimited Multi-Filter</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ad-Free Experience</strong></td>
+                                    <td>Supported by native ads</td>
+                                    <td><strong>100% Ad-Free</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Family Sharing</strong></td>
+                                    <td>—</td>
+                                    <td><strong>Supported (Up to 5 family members)</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>How do I restore my purchase or manage my subscription?</summary>
+                <div class="answer">
+                    <p>Inbounder uses Apple's native StoreKit 2 architecture:</p>
+                    <ul>
+                        <li><strong>Restore Purchases:</strong> In the Inbounder Settings or Pro upgrade sheet, tap <strong>"Restore Purchases"</strong> to instantly sync your subscription across all your iPhones, iPads, and Macs signed in with the same Apple ID.</li>
+                        <li><strong>Manage Subscription:</strong> You can cancel or change your plan at any time through your device's <em>Settings &gt; [Your Name] &gt; Subscriptions</em>.</li>
+                    </ul>
+                </div>
+            </details>
+        </section>
+
+        <!-- SECTION 7: Troubleshooting -->
+        <section id="troubleshooting">
+            <div class="section-header">
+                <div class="section-icon">🛠️</div>
+                <h2>Troubleshooting & Diagnostics</h2>
+            </div>
+
+            <details class="faq-item">
+                <summary>Why am I not seeing any flights on the radar?</summary>
+                <div class="answer">
+                    <p>If the radar is empty or not showing aircraft:</p>
+                    <ol>
+                        <li><strong>Check Auto Refresh:</strong> Verify that <em>Tracking / Auto Refresh</em> is toggled ON in the top status bar.</li>
+                        <li><strong>Verify Location Permissions:</strong> Check that Location Services are set to <em>"While Using the App"</em> (or <em>"Always"</em> for background geofencing) in <em>iOS/macOS Settings &gt; Privacy & Security &gt; Location Services &gt; Inbounder</em>.</li>
+                        <li><strong>Check Active Airspace Filters:</strong> If you have model, airline, or altitude filters enabled, they may be hiding current flights. Tap the Filter button and tap <em>"Reset Filters"</em>.</li>
+                        <li><strong>Expand Alert Radius or Zoom Out:</strong> In rural or sparse airspace, there may simply be no aircraft directly within a small 5–10 km radius. Increase your radius to 30–50 km to inspect approaching traffic.</li>
+                        <li><strong>Backend Status Indicator:</strong> In the status menu, verify that the Intellirush Cloud indicator is green (Operational).</li>
+                    </ol>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Why am I not receiving background notifications on iOS?</summary>
+                <div class="answer">
+                    <p>To receive push alerts when the app is in the background or screen is locked:</p>
+                    <ul>
+                        <li>Ensure <strong>Notifications</strong> are allowed for Inbounder in <em>iOS Settings &gt; Notifications &gt; Inbounder &gt; Allow Notifications</em> (ensure Banners, Sounds, and Badges are turned on).</li>
+                        <li>Verify that <strong>Background Alerts</strong> is enabled in Inbounder's Settings tab.</li>
+                        <li>Confirm your device is connected to Wi-Fi or Cellular data so Apple's APNs service can deliver push payloads.</li>
+                        <li>Check that <em>Do Not Disturb</em> or a <em>Focus Mode</em> is not silencing notifications.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary>Do I need to configure API keys or create an external account?</summary>
+                <div class="answer">
+                    <p><strong>No!</strong> Intellirush Inbounder is ready to track immediately upon installation. All live flight telemetry, geofence monitoring, and spatial calculations are natively handled by the dedicated <strong>Intellirush Cloud Backend</strong>. There are no API keys to generate, no developer registrations, and no complex configurations required. Learn more at <a href="https://www.intellirush.com" target="_blank" rel="noopener">www.intellirush.com</a>.</p>
+                </div>
+            </details>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Intellirush. All rights reserved.</p>
+        <p style="margin-top: 8px;">
+            <a href="https://www.intellirush.com" target="_blank" rel="noopener">www.intellirush.com</a> &bull; 
+            <a href="mailto:support@intellirush.com">support@intellirush.com</a> &bull; 
+            <a href="#overview">Back to Top</a>
+        </p>
+    </footer>
+
+    <script>
+        function filterFaqs() {
+            const query = document.getElementById('faqSearch').value.toLowerCase().trim();
+            const items = document.querySelectorAll('.faq-item');
+            const sections = document.querySelectorAll('section');
+
+            items.forEach(item => {
+                const summary = item.querySelector('summary').textContent.toLowerCase();
+                const answer = item.querySelector('.answer').textContent.toLowerCase();
+                const matches = summary.includes(query) || answer.includes(query);
+
+                if (query === '') {
+                    item.style.display = '';
+                } else {
+                    item.style.display = matches ? '' : 'none';
+                    if (matches) {
+                        item.open = true;
+                    }
+                }
+            });
+
+            // Hide empty sections during search
+            if (query !== '') {
+                sections.forEach(sec => {
+                    const visibleItems = sec.querySelectorAll('.faq-item:not([style*="display: none"])');
+                    sec.style.display = visibleItems.length > 0 ? '' : 'none';
+                });
+            } else {
+                sections.forEach(sec => {
+                    sec.style.display = '';
+                });
+            }
+        }
+    </script>
+</body>
+</html>
